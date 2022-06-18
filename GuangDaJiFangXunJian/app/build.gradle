@@ -1,0 +1,116 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.ceb.dcpms.android"
+        minSdkVersion 26
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        ndk {
+            abiFilters 'x86', 'armeabi-v7a', 'arm64-v8a'
+        }
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        flavorDimensions "versionCode"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'test'
+            keyPassword '123456'
+            storePassword '123456'
+            storeFile file('D:\\android\\store\\test.jks')
+        }
+        debug {
+            keyAlias 'test'
+            keyPassword '123456'
+            storePassword '123456'
+            storeFile file('D:\\android\\store\\test.jks')
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            signingConfig signingConfigs.release
+            buildConfigField "boolean", "ifShowLog", "false"
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+            buildConfigField "boolean", "ifShowLog", "true"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    productFlavors {
+        dcpms {}
+    }
+
+    //release版本输出包名自动追加版本号和版本名称
+    applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                //只处理生产版本
+                if (buildType.name == 'release') {
+                    def createTime = new Date().format("YYYY-MM-dd", TimeZone.getTimeZone("GMT+08:00"))
+                    // app包名称
+                    outputFileName = productFlavors[0].name + "_v_" + defaultConfig.versionName + "_" + createTime + "_" + buildType.name + ".apk"
+                }
+            }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.aar'], dir: 'libs')
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+//    implementation "com.android.support:support-v4:$supportVersion"
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+
+    implementation 'com.android.support:multidex:1.0.1'
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.orhanobut:logger:2.2.0';
+
+    //json
+    implementation 'com.google.code.gson:gson:2.4'
+
+    //butterknife
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+    //网络请求
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.lzy.net:okrx2:2.0.2'
+
+    // RxJava
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.5'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+}

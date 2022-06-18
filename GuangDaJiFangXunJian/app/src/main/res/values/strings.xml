@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">机房智能巡检系统</string>
+    <string name="text_company_name">中国光大银行</string>
+    <string name="text_company_name_en">CHINA EVERBRIGHT BANK</string>
+    <string name="text_home_menu_1">服务器巡检</string>
+    <string name="text_home_menu_2">硬盘消磁销毁</string>
+    <string name="text_home_menu_3">基础设备巡检</string>
+    <string name="text_home_menu_4">退出系统</string>
+
+    <string name="text_menu_service_task_1">定时任务</string>
+    <string name="text_menu_service_task_2">临时任务</string>
+
+    <string name="text_title_checkservice">服务器巡检</string>
+
+    <string name="text_check_status">巡检状态：</string>
+    <string name="text_check_status_checked">已完成</string>
+    <string name="text_check_status_nocheck">未巡检</string>
+    <string name="text_check_cabinet_number">机柜编号：</string>
+
+    <string name="text_label_total">标签总数：</string>
+    <string name="text_cabinet_total">机柜总数：</string>
+
+    <string name="text_device_1">设备类型：</string>
+    <string name="text_device_2">设备名称：</string>
+    <string name="text_device_3">巡检类型：</string>
+    <string name="text_device_4">设备序号：</string>
+    <string name="text_device_5">是否在设备故障维护期：</string>
+
+    <string name="text_device_detail_1">属性名称：</string>
+    <string name="text_device_detail_2">属性状态：</string>
+    <string name="text_device_detail_3">属性说明：</string>
+    <string name="text_device_detail_4">故障说明：</string>
+
+    <string name="rationale_ask_again">如果没有请求的权限，这个应用程序可能无法正常工作。打开应用程序设置界面修改应用程序权限。</string>
+    <string name="rationale_cancle">申请权限被拒绝。</string>
+
+    <string name="dialog_title">提示</string>
+    <string name="dialog_message_label_identification_type">巡检点位标签识别</string>
+    <string name="dialog_message_check_no_complete">尚有巡检点位未完成巡检操作！</string>
+    <string name="dialog_message_check_device_no_complete">尚有设备未完成巡检操作！</string>
+    <string name="dialog_message_check_device_complete">全部设备已完成巡检，点击确定按钮 返回机房列表！</string>
+
+    <string name="hint_account">请输入工号</string>
+    <string name="hint_password">请输入密码</string>
+    <string name="hint_remark">备注</string>
+
+    <string name="btn_login">登录</string>
+    <string name="btn_login_by_face">人脸识别</string>
+    <string name="btn_upload_data">数据同步</string>
+    <string name="btn_complete_task">完成任务</string>
+    <string name="btn_identification_nfc">NFC标签识别</string>
+    <string name="btn_identification_qrcode">二维码识别</string>
+    <string name="btn_ok">确定</string>
+    <string name="btn_camera">自由拍摄</string>
+    <string name="btn_map">机房地图</string>
+    <string name="btn_unknown">未知设备</string>
+    <string name="btn_next_label">下一标签</string>
+    <string name="btn_complete">完成</string>
+    <string name="btn_save">保存</string>
+    <string name="btn_prev">上一个</string>
+    <string name="btn_next">下一个</string>
+
+    <string name="err_login_account">请输入工号！</string>
+    <string name="err_login_password">请输入密码！</string>
+</resources>

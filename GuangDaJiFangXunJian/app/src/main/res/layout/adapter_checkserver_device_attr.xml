@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_adapter_task"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextAdapterTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_device_detail_1" />
+
+        <TextView
+            android:id="@+id/tv_attr_name"
+            style="@style/TextDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextAdapterTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_device_detail_2" />
+
+        <RelativeLayout
+            android:id="@+id/rl_attr_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/tmp"
+                android:layout_width="@dimen/icon_arrow_down_width"
+                android:layout_height="@dimen/icon_arrow_down_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:srcCompat="@mipmap/icon_arrow_down_filling" />
+
+            <TextView
+                android:id="@+id/tv_attr_status"
+                style="@style/TextDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/tmp"
+                android:text="TextView" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/et_attr_desc"
+            style="@style/TextDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/tmp"
+            android:background="@drawable/bg_edittext"
+            android:ems="10"
+            android:gravity="top"
+            android:maxHeight="100dp"
+            android:minHeight="50dp"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@id/tmp"
+            style="@style/TextAdapterTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/text_device_detail_3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/et_attr_fault"
+            style="@style/TextDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/tmp"
+            android:background="@drawable/bg_edittext"
+            android:ems="10"
+            android:gravity="top"
+            android:maxHeight="100dp"
+            android:minHeight="50dp"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@id/tmp"
+            style="@style/TextAdapterTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/text_device_detail_4" />
+    </RelativeLayout>
+
+
+</LinearLayout>

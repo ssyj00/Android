@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="icon_login_width">20dp</dimen>
+    <dimen name="icon_login_height">20dp</dimen>
+    <dimen name="icon_home_width">25dp</dimen>
+    <dimen name="icon_home_height">25dp</dimen>
+    <dimen name="icon_back_width">35dp</dimen>
+    <dimen name="icon_back_height">35dp</dimen>
+    <dimen name="icon_task_download_width">20dp</dimen>
+    <dimen name="icon_task_download_height">20dp</dimen>
+    <dimen name="icon_task_small_width">20dp</dimen>
+    <dimen name="icon_task_small_height">20dp</dimen>
+    <dimen name="icon_button_width">20dp</dimen>
+    <dimen name="icon_button_height">20dp</dimen>
+    <dimen name="icon_button_small_width">15dp</dimen>
+    <dimen name="icon_button_small_height">15dp</dimen>
+    <dimen name="icon_arrow_down_width">15dp</dimen>
+    <dimen name="icon_arrow_down_height">15dp</dimen>
+
+    <dimen name="radius_edit">3dp</dimen>
+    <dimen name="radius_button">3dp</dimen>
+    <dimen name="radius_adapter_task">3dp</dimen>
+    <dimen name="radius_home_menu">3dp</dimen>
+
+    <dimen name="title_height">45dp</dimen>
+
+    <dimen name="button_height">40dp</dimen>
+</resources>
